@@ -1,0 +1,24 @@
+.titles {
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-family-Book-antiqua), sans-serif;
+  font-weight: 400;
+  font-size: 2.917vw;
+  line-height: 3.49vw;
+  text-transform: uppercase;
+}
+
+.label {
+  position: absolute;
+  top: 4vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-Carattere), sans-serif;
+  font-weight: 400;
+  font-size: 5.521vw;
+  line-height: 6.302vw;
+  text-transform: lowercase;
+  color: var(--red-color);
+}

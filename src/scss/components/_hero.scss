@@ -1,0 +1,93 @@
+.hero {
+  padding-top: 5.8vw;
+  height: 40.292vw;
+  &__inner {
+    display: flex;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -8vw;
+      left: 46.5%;
+      width: 4vw;
+      height: 150%;
+      background-color: var(--red-color);
+      transform: rotate(41.5deg);
+      z-index: 3;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding: 2.469vw 6.5vw 6vw;
+    position: absolute;
+    top: 24vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--light-color);
+    box-shadow: 0vw 0.208vw 2.604vw rgba(0, 0, 0, 0.15);
+    border-radius: 1.042vw;
+    z-index: 3;
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 1.042vw;
+    margin-bottom: 1.042vw;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6.458vw;
+      height: 0.052vw;
+      background-color: var(--black-color);
+    }
+  }
+
+  &__subtitle {
+    span {
+      text-transform: lowercase;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    img {
+      height: 100%;
+      animation: bg 10s ease-in-out infinite;
+      animation-direction: alternate;
+    }
+  }
+
+  &__image--meet {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+    z-index: 2;
+  }
+
+  &__image--fish {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes bg {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}

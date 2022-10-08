@@ -1,5 +1,11 @@
 .header {
-  padding: 1.042vw 5.729vw;
+  padding: 0.7vw 5.729vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  z-index: 4;
 }
 .nav {
   &__list {
