@@ -1,0 +1,56 @@
+.header {
+  padding: 1.042vw 5.729vw;
+}
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    margin-right: 2.344vw;
+
+    &:last-child {
+      margin-right: 1vw;
+    }
+  }
+
+  &__item-logo {
+    margin: 0 auto;
+    width: 6.875vw;
+    height: 4.375vw;
+  }
+
+  &__item-phone {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 1.3vw;
+      height: 1.3vw;
+      fill: #000;
+      padding-right: 0.417vw;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__link {
+    font-size: 1.042vw;
+    line-height: 1.224vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--black-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__link-phone {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav__item:hover svg,
+.nav__link:hover {
+  color: var(--red-color);
+  fill: var(--red-color);
+}

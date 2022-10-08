@@ -4,5 +4,8 @@
 @import "fonts";
 @import "settings";
 
+// подключения мелких компонентов страницы
+@import "./components/choices";
+
 // подключения компонентов страницы
 @import "./components/header";

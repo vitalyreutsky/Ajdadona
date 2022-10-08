@@ -1,0 +1,113 @@
+.choices {
+  width: 1.702vw;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+.choices[data-type*="select-one"] {
+  cursor: pointer;
+  display: flex;
+}
+.choices__inner {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-weight: 600;
+  min-height: auto;
+  overflow: visible;
+
+  font-size: 1.042vw;
+  line-height: 1.224vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+.choices__list--single {
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+}
+
+.choices[data-type*="select-one"] .choices__inner {
+  padding: 0;
+}
+
+.choices[data-type*="select-one"]::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-color: #333 transparent transparent;
+  border-width: 0.36vw;
+  position: absolute;
+  right: -0.781vw;
+  top: 50%;
+  margin-top: -0.256vw;
+  pointer-events: none;
+}
+
+.choices[data-type*="select-one"].is-open::after {
+  margin-top: -0.591vw;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: transparent;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  top: 100%;
+  margin-top: -0.052vw;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: visible;
+  word-break: break-all;
+  will-change: visibility;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  position: relative;
+  padding: 0;
+
+  font-size: 1.042vw;
+  line-height: 1.224vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+.choices__list--dropdown .choices__list,
+.choices__list[aria-expanded] .choices__list {
+  position: relative;
+  max-height: none;
+  margin-top: 0.521vw;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
+  display: none;
+}
+
+@media (min-width: 33.333vw) {
+  .choices__list--dropdown .choices__item--selectable,
+  .choices__list[aria-expanded] .choices__item--selectable {
+    padding-right: 0vw;
+  }
+}
