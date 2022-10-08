@@ -1,0 +1,21 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family-Amiko: "Amiko";
+  --font-family-Book-antiqua: "Book-antiqua";
+  --font-family-Carattere: "Carattere";
+  --font-family-MavenPro: "MavenPro";
+
+  --content-width-min: 1366px;
+  --container-offset: 15px;
+  --container-width: calc(
+    var(--content-width-min) + (var(--container-offset) * 2)
+  );
+
+  // colors
+  --light-color: #fff;
+  --black-color: #363636;
+  --red-color: #db3f5a;
+  --gray-color: #1e1e1e;
+}
