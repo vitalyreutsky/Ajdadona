@@ -67,12 +67,14 @@
   z-index: 1;
   position: absolute;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--light-color);
   border: none;
   top: 100%;
   margin-top: -0.052vw;
+  padding: 0.1vw 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-radius: 0.121vw;
   overflow: visible;
   word-break: break-all;
   will-change: visibility;
