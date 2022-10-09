@@ -2,4 +2,4 @@
 
 ### _Ссылка на проект_:
 
-[white-story](https://vitalyreutsky.github.io/Adjadona/)
+[adjadona](https://vitalyreutsky.github.io/Adjadona/)
