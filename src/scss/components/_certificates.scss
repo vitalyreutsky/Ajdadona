@@ -4,6 +4,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 7.813vw;
 
   &::after {
     content: "";
@@ -69,10 +70,16 @@
   top: 57%;
   width: 3.167vw;
   height: 3.167vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(31, 30, 30, 0.5);
+  backdrop-filter: blur(0.26vw);
   border-radius: 50%;
   color: var(--light-color);
+  transition: all 0.3s ease-in-out;
   z-index: 3;
+
+  &:hover {
+    background-color: var(--red-color);
+  }
 }
 
 .certificates .swiper-button-next::after,
