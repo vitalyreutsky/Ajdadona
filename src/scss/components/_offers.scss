@@ -1,0 +1,106 @@
+.offers {
+  padding: 5.208vw 0vw 9vw;
+  background-color: var(--red-color);
+  position: relative;
+  overflow: hidden;
+
+  .titles {
+    .label {
+      color: var(--light-color);
+    }
+  }
+
+  &__boubles {
+    position: absolute;
+    top: 11%;
+    left: 8%;
+    width: 13.542vw;
+    height: 16.51vw;
+    z-index: 1;
+  }
+
+  &__pattern {
+    position: absolute;
+    bottom: 6%;
+    right: 21%;
+    width: 10.938vw;
+    height: 6.407vw;
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  &__swiper {
+    overflow: visible;
+  }
+
+  &__slide {
+    width: 22.865vw;
+    height: 16.927vw;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+}
+
+.offers .swiper-button-next,
+.offers .swiper-button-prev {
+  top: 50%;
+  width: 3.167vw;
+  height: 3.167vw;
+  background: var(--light-color);
+  border-radius: 50%;
+  color: var(--black-color);
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+
+  &:hover {
+    background-color: var(--red-color);
+  }
+}
+
+.offers .swiper-button-next::after,
+.offers .swiper-button-prev::after {
+  font-size: 1.563vw;
+}
+
+.offers .swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: -12%;
+  right: auto;
+}
+
+.offers .swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: -12%;
+  left: auto;
+}
+
+//pagination
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -5.188vw;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 0.365vw;
+  height: 0.365vw;
+  display: inline-block;
+  border-radius: 1.406vw;
+  background: var(--light-color);
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--light-color);
+  width: 1.302vw;
+  height: 0.365vw;
+  border-radius: 1.406vw;
+}
