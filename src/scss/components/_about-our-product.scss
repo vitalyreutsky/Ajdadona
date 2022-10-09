@@ -1,0 +1,68 @@
+.about-our-product {
+  margin-bottom: 8.333vw;
+
+  .titles {
+    flex-direction: column;
+    .label {
+      transform: translateY(-2vw);
+    }
+  }
+
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 2.302vw;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__descr {
+    width: 50%;
+    padding-top: 1vw;
+
+    &:nth-child(2n + 1) {
+      margin-right: 3.438vw;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-Book-antiqua);
+    font-weight: 700;
+    font-size: 2.188vw;
+    line-height: 2.604vw;
+    color: var(--red-color);
+    margin-bottom: 1.563vw;
+  }
+
+  &__text {
+    font-size: 1.146vw;
+    line-height: 1.979vw;
+    margin-bottom: 1.563vw;
+  }
+
+  &__link {
+    font-size: 1.146vw;
+    line-height: 1.823vw;
+    color: var(--red-color);
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  &__image {
+    width: 50%;
+    img {
+      width: 34.948vw;
+      height: 27.5vw;
+      height: 100%;
+      border-radius: 1.042vw;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 3.438vw;
+    }
+  }
+}
