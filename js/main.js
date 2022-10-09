@@ -130,6 +130,27 @@ const certificatesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   }
+}); //offers-swiper
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard]);
+const offersSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".offers__swiper", {
+  slidesPerView: 3.1,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  speed: 1000,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: false
+  }
 });
 
 /***/ }),
