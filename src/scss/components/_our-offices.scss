@@ -1,12 +1,17 @@
 .our-offices {
   position: relative;
   padding-bottom: 10vw;
+  overflow: hidden;
 
   .titles {
+    position: relative;
+    z-index: 3;
     margin-bottom: 7.813vw;
   }
 
   &__cards {
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -19,6 +24,31 @@
     &:first-child,
     &:nth-child(4) {
       transform: translateY(-4.167vw);
+    }
+  }
+
+  &__subtract {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 32.083vw;
+    z-index: 2;
+  }
+
+  &__sea {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 32.083vw;
+    width: 150%;
+    transition: all 0.3s;
+    img {
+      width: 100%;
+      height: 100%;
+      animation: sea 10s ease-in-out infinite;
+      animation-direction: alternate;
     }
   }
 }
@@ -102,3 +132,12 @@
     margin-bottom: 0.521vw;
   }
 }
+
+//@keyframes sea {
+//  0% {
+//    width: 100%;
+//  }
+//  100% {
+//    width: 110%;
+//  }
+//}
