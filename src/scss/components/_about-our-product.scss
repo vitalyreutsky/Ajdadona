@@ -1,6 +1,18 @@
 .about-our-product {
   margin-bottom: 8.333vw;
 
+  &__inner {
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -11vw;
+    left: -6vw;
+    width: 13.333vw;
+    height: 7.813vw;
+  }
+
   .titles {
     flex-direction: column;
     .label {
@@ -14,7 +26,7 @@
       margin-bottom: 2.302vw;
     }
 
-    &:nth-child(2n) {
+    &:nth-child(2n + 1) {
       flex-direction: row-reverse;
     }
   }
@@ -24,7 +36,7 @@
     padding-top: 1vw;
 
     &:nth-child(2n + 1) {
-      margin-right: 3.438vw;
+      margin-right: 2.501vw;
     }
   }
 
@@ -33,23 +45,30 @@
     font-weight: 700;
     font-size: 2.188vw;
     line-height: 2.604vw;
-    color: var(--red-color);
     margin-bottom: 1.563vw;
   }
 
   &__text {
-    font-size: 1.146vw;
-    line-height: 1.979vw;
+    font-size: 1.042vw;
+    line-height: 1.771vw;
     margin-bottom: 1.563vw;
   }
 
   &__link {
+    display: flex;
+    align-items: center;
     font-size: 1.146vw;
     line-height: 1.823vw;
     color: var(--red-color);
     display: flex;
     width: fit-content;
     margin-left: auto;
+    svg {
+      width: 0.7vw;
+      height: 0.7vw;
+      fill: var(--red-color);
+      margin-left: 0.3vw;
+    }
   }
 
   &__image {
@@ -62,7 +81,7 @@
     }
 
     &:nth-child(2n) {
-      margin-right: 3.438vw;
+      margin-right: 2.501vw;
     }
   }
 }
