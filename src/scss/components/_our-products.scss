@@ -6,8 +6,19 @@
 
   &__boubles {
     position: absolute;
-    top: 1.6vw;
+    top: 1vw;
+    right: -7.5vw;
+    width: 11.667vw;
+    height: 14.219vw;
+    z-index: -1;
+  }
+
+  &__pattern {
+    position: absolute;
+    bottom: 0;
     left: 0;
+    width: 13.334vw;
+    height: 7.813vw;
     z-index: -1;
   }
 
