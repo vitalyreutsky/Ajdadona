@@ -63,11 +63,19 @@
     display: flex;
     width: fit-content;
     margin-left: auto;
+    transition: all 0.3s ease-in-out;
     svg {
       width: 0.7vw;
       height: 0.7vw;
       fill: var(--red-color);
       margin-left: 0.3vw;
+    }
+  }
+
+  &__link:hover {
+    color: var(--black-color);
+    svg {
+      fill: var(--black-color);
     }
   }
 

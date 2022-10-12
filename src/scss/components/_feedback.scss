@@ -114,5 +114,9 @@
     border-radius: 0.521vw;
     line-height: 1.771vw;
     text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: var(--black-color);
+    }
   }
 }
