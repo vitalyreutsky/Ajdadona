@@ -10,7 +10,7 @@
     border-bottom: 1px solid #eae6e6;
   }
 
-  &__header {
+  &__items {
     width: 14.583vw;
   }
 
@@ -110,6 +110,8 @@
   }
 
   &__card-title {
+    font-weight: 700;
+    line-height: 1.771vw;
     position: absolute;
     bottom: -1vw;
     left: 50%;

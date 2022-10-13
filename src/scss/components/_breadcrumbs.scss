@@ -18,7 +18,12 @@
         width: 0.078vw;
         height: 65%;
         background-color: #999999;
+        opacity: 0.4;
       }
+    }
+
+    &:last-child {
+      pointer-events: none;
     }
   }
 
