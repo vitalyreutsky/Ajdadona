@@ -1,0 +1,136 @@
+.products {
+  padding-bottom: 4.688vw;
+  position: relative;
+  overflow: hidden;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.125vw 0;
+    border-top: 1px solid #eae6e6;
+    border-bottom: 1px solid #eae6e6;
+  }
+
+  &__header {
+    width: 14.583vw;
+  }
+
+  &__boubles {
+    position: absolute;
+    bottom: 7vw;
+    left: 14vw;
+    width: 20.73vw;
+    height: 25.261vw;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  &__pattern {
+    position: absolute;
+    top: 17vw;
+    right: 5vw;
+    width: 13.334vw;
+    height: 7.813vw;
+    z-index: -1;
+    transform: rotate(180deg);
+  }
+
+  &__content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.25vw;
+    grid-row-gap: 3.646vw;
+  }
+}
+
+.product {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2.604vw;
+    }
+  }
+
+  &__item-kind {
+    margin-bottom: 0.781vw;
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    color: var(--black-color);
+    font-size: 1.979vw;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    span {
+      margin: 0 auto 0 0.521vw;
+      font-weight: 500;
+      font-size: 0.938vw;
+      line-height: 1.094vw;
+      color: rgba(0, 0, 0, 0.47);
+      pointer-events: none;
+    }
+
+    svg {
+      transition: all 0.2s ease-in-out;
+      width: 1.042vw;
+      height: 1.042vw;
+      pointer-events: none;
+    }
+  }
+
+  &__item-link {
+    &:not(:last-child) {
+      margin-bottom: 0.781vw;
+    }
+    a {
+      color: var(--black-color);
+      font-size: 1.25vw;
+      line-height: 1.458vw;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: var(--red-color);
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 25.885vw;
+    height: 18.229vw;
+  }
+
+  &__card-image {
+    border-radius: 1.042vw;
+    overflow: hidden;
+    img {
+      transition: all 0.4s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__card-title {
+    position: absolute;
+    bottom: -1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--black-color);
+    color: var(--light-color);
+    width: 20.833vw;
+    height: 2.083vw;
+    border-radius: 2.188vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+//products hover
+.product__card:hover img {
+  transform: scale(1.2);
+}
+
+.product__card:hover .product__card-title {
+  background-color: var(--red-color);
+}

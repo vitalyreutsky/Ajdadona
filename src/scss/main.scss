@@ -8,8 +8,10 @@
 @import "./components/choices";
 @import "./components/titles";
 @import "./components/scrollToTop";
+@import "./components/tabs";
+@import "./components/breadcrumbs";
 
-// подключения компонентов страницы
+// подключения компонентов главной страницы
 @import "./components/header";
 @import "./components/hero";
 @import "./components/our-products";
@@ -20,3 +22,6 @@
 @import "./components/about-our-product";
 @import "./components/offers";
 @import "./components/footer";
+
+// подключения компонентов страницы продуктов
+@import "./components/products";

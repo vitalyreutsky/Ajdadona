@@ -1,0 +1,28 @@
+.show-tabs-menu {
+  display: block !important;
+}
+
+.show-tabs-content {
+  display: grid !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.tab-header__item--active {
+  color: var(--red-color) !important;
+  span {
+    color: rgba(0, 0, 0, 0.47);
+  }
+}
+
+.accordion__header.active .accordion__header-icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.product__item-title.tab-header__item--active svg {
+  transform: rotate(180deg);
+}
