@@ -36,6 +36,7 @@
     width: 53.021vw;
     height: 18.229vw;
     display: flex;
+    margin-bottom: 3.125vw;
   }
 
   &__card-image {
@@ -93,5 +94,12 @@
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease-in-out;
+  }
+
+  &__btn {
+    width: 10.833vw;
+    height: 3.125vw;
+    display: block;
+    margin: 0 auto;
   }
 }
