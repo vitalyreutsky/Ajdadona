@@ -1,0 +1,46 @@
+.about-hero {
+  height: 40.292vw;
+  margin-bottom: 7.292vw;
+  overflow: hidden;
+  .breadcrumbs {
+    padding-top: 0;
+    position: relative;
+    top: 7vw;
+    z-index: 1;
+
+    &__item-main {
+      &::after {
+        background-color: var(--light-color);
+      }
+    }
+
+    &__link {
+      color: var(--light-color);
+    }
+
+    &__link--active {
+      color: var(--gray-color);
+    }
+  }
+  .hero__inner {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__image--sea {
+    height: 43.083vw;
+    transform: translateY(4vw);
+    animation: about-bg 10s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes about-bg {
+  0% {
+    transform: translateY(4vw);
+  }
+  100% {
+    transform: translateY(-4vw);
+  }
+}
