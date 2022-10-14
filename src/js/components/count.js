@@ -1,38 +1,104 @@
-//const countItemOne = document.querySelector(".count-results--one");
-//const countItemSecond = document.querySelector(".count-results--second");
-//const countThird = document.querySelector(".count-results--third");
+const { root } = require("postcss");
 
-//const countValueOne = document.querySelector("[data-count-one]");
-//const countValueSecond = document.querySelector("[data-count-second]");
-//const countValueThird = document.querySelector("[data-count-third]");
+const countValueOne =
+  +document.querySelector("[data-count-one]").dataset.countOne;
 
-//const arrCountOne = [234, 360, 379, 460, 578, 978];
-//const arrCountTwo = [1234, 3890, 5360, 6825, 7379, 7460, 7578, 8560, 9978];
-//const arrCountThird = [234, 890, 360, 825, 379, 460, 578, 560, 978];
+const countValueSecond = +document.querySelector("[data-count-second]").dataset
+  .countSecond;
 
-//function printNumbers(arr, countItem, endNum) {
-//  i = 0;
-//  setTimeout(function run() {
-//    if (i < arr.length) {
-//      go(i, arr, countItem, endNum);
-//      i++;
-//      setTimeout(run, 500);
-//    }
-//  }, 500);
-//}
+const countValueThird =
+  +document.querySelector("[data-count-third]").dataset.countThird;
 
-//function go(i, arr, countItem, endNum) {
-//  if (arr[i] <= endNum) {
-//    countItem.innerHTML = arr[i];
-//  }
-//}
+const objs = [
+  {
+    countItem: document.querySelector(".count-results--one"),
+    countValue: countValueOne,
+    arrCount: [
+      "00" + 234,
+      "00" + 890,
+      "00" + 379,
+      "0" + 1360,
+      "0" + 3825,
+      "0" + 6379,
+      13460,
+      15578,
+      16560,
+      19978,
+      countValueOne,
+    ],
+  },
+  {
+    countItem: document.querySelector(".count-results--second"),
+    countValue: countValueSecond,
+    arrCount: [
+      "00" + 534,
+      "00" + 890,
+      "0" + 1379,
+      "0" + 5360,
+      "0" + 9825,
+      11379,
+      15460,
+      20578,
+      31560,
+      35978,
+      countValueSecond,
+    ],
+  },
+  {
+    countItem: document.querySelector(".count-results--third"),
+    countValue: countValueThird,
+    arrCount: [
+      "00" + 534,
+      "0" + 1890,
+      "0" + 9379,
+      15360,
+      20169,
+      29825,
+      31379,
+      45460,
+      50578,
+      61560,
+      countValueThird,
+    ],
+  },
+];
 
-//setTimeout(() => {
-//  printNumbers(arrCountOne, countItemOne, countValueOne.dataset.countOne);
-//}, 100);
+function printNumbers() {
+  i = 0;
+  setTimeout(function run() {
+    if (
+      i < objs[0].arrCount.length ||
+      i < objs[1].arrCount.length ||
+      i < objs[2].arrCount.length
+    ) {
+      go(i);
+      i++;
+      setTimeout(run, 50);
+    }
+  }, 50);
+}
 
-//printNumbers(
-//  arrCountTwo,
-//  countItemSecond,
-//  countValueSecond.dataset.countSecond
-//);
+function go(i) {
+  objs.forEach(({ countItem, countValue, arrCount }) => {
+    if (arrCount[i] <= countValue) {
+      countItem.innerHTML = arrCount[i];
+    }
+  });
+}
+
+const workSection = document.querySelector(".count-results");
+const workObserver = new IntersectionObserver(
+  (entries, observer) => {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    printNumbers();
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+
+workObserver.observe(workSection);
