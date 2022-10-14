@@ -1,0 +1,111 @@
+.contacts {
+  padding-bottom: 8.333vw;
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 65.313vw;
+    animation: contacts-bg 10s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+
+  &__inner {
+    border-top: 0.052vw solid #eae6e6;
+  }
+
+  &__map {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    border-top-right-radius: 0.7vw;
+    border-bottom-right-radius: 0.7vw;
+    svg {
+      position: absolute;
+      top: 33%;
+      left: 37%;
+      fill: var(--red-color);
+      width: 4.688vw;
+      height: 3.646vw;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 51%;
+      left: 46%;
+      width: 1.527vw;
+      height: 0.156vw;
+      background-color: #d9d9d9;
+      border-radius: 30%;
+    }
+  }
+
+  &__map-image {
+    display: block;
+    width: 30vw;
+    height: 100%;
+    border-top-right-radius: 0.7vw;
+    border-bottom-right-radius: 0.7vw;
+    img {
+      width: 100%;
+      height: 100%;
+      transform: translateX(0.521vw);
+      border-top-right-radius: 0.7vw;
+      border-bottom-right-radius: 0.7vw;
+    }
+  }
+
+  .our-offices__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.25vw;
+    grid-row-gap: 3.385vw;
+    padding-top: 3.542vw;
+  }
+
+  .our-offices__item:first-child,
+  .our-offices__item:nth-child(4) {
+    transform: translateY(0);
+  }
+
+  .our-offices__item {
+    width: 34.948vw;
+    height: 20.833vw;
+    padding: 0;
+  }
+
+  .office-card {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: inherit;
+    box-shadow: 0vw 0.208vw 2.604vw rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.26vw);
+
+    &__info {
+      padding: 2.083vw 1.615vw;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      border-top-right-radius: 1vw;
+      border-bottom-right-radius: 1vw;
+    }
+
+    &__country {
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes contacts-bg {
+  0% {
+    transform: translateY(4vw);
+  }
+  100% {
+    transform: translateY(0vw);
+  }
+}
