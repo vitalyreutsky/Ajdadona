@@ -2,6 +2,7 @@
   background: linear-gradient(90deg, #c4dfeb 0%, #d7e8ef 50.6%, #d7e8ef 100%);
   position: relative;
   padding: 5.417vw 0vw;
+  overflow: hidden;
   .titles {
     flex-direction: column;
     margin-bottom: 1vw;
@@ -115,7 +116,12 @@
     line-height: 1.771vw;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
-    &:hover {
+    @include for-desktop {
+      &:hover {
+        background-color: var(--black-color);
+      }
+    }
+    &:focus {
       background-color: var(--black-color);
     }
   }

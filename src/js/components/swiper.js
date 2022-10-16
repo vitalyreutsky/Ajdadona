@@ -25,13 +25,26 @@ const certificatesSwiper = new Swiper(".certificates__swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    375: {
+      slidesPerView: 2.5,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 5,
+      slidesPerGroup: 1,
+    },
+  },
 });
 
 //offers-swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const offersSwiper = new Swiper(".offers__swiper", {
-  slidesPerView: 3.1,
-  slidesPerGroup: 1,
   spaceBetween: 20,
   keyboard: {
     enabled: true,
@@ -48,5 +61,26 @@ const offersSwiper = new Swiper(".offers__swiper", {
     el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: false,
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      loop: true,
+      centeredSlides: true,
+    },
+    375: {
+      slidesPerView: 1.8,
+      slidesPerGroup: 1,
+      loop: true,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 3.1,
+      slidesPerGroup: 1,
+      loop: false,
+      centeredSlides: false,
+    },
   },
 });

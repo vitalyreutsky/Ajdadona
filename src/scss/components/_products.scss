@@ -87,8 +87,10 @@
       font-size: 1.25vw;
       line-height: 1.458vw;
       transition: all 0.2s ease-in-out;
-      &:hover {
-        color: var(--red-color);
+      @include for-desktop {
+        &:hover {
+          color: var(--red-color);
+        }
       }
     }
   }
@@ -128,11 +130,13 @@
   }
 }
 
-//products hover
-.product__card:hover img {
-  transform: scale(1.2);
-}
+@include for-desktop {
+  //products hover
+  .product__card:hover img {
+    transform: scale(1.2);
+  }
 
-.product__card:hover .product__card-title {
-  background-color: var(--red-color);
+  .product__card:hover .product__card-title {
+    background-color: var(--red-color);
+  }
 }

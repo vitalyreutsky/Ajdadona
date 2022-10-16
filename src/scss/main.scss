@@ -10,6 +10,7 @@
 @import "./components/scrollToTop";
 @import "./components/tabs";
 @import "./components/breadcrumbs";
+@import "./components/burger";
 
 // подключения компонентов главной страницы
 @import "./components/header";
@@ -36,3 +37,7 @@
 
 // подключения компонентов страницы контактов
 @import "./components/contacts";
+
+// media запросы
+@import "./components/media";
+@import "./components/media-test";

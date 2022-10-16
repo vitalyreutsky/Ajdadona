@@ -1,5 +1,6 @@
 .our-products {
   margin-bottom: 8.292vw;
+  overflow: hidden;
   &__container {
     position: relative;
   }
@@ -15,9 +16,9 @@
 
   &__pattern {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 13.334vw;
+    bottom: -3vw;
+    left: -5vw;
+    width: 13.333vw;
     height: 7.813vw;
     z-index: -1;
   }
@@ -59,12 +60,13 @@
     width: 25vw;
     height: 100%;
     transition: all 0.4s ease-in-out;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__link {
-    font-size: 1.979vw;
-    line-height: 2.326vw;
-    font-weight: 500;
     width: 2.865vw;
     height: 2.865vw;
     border: 0.052vw solid var(--black-color);
@@ -79,36 +81,29 @@
       height: 1vw;
     }
   }
+}
 
-  &__pattern {
-    position: absolute;
-    bottom: -3vw;
-    left: -5vw;
-    width: 13.333vw;
-    height: 7.813vw;
-    z-index: -1;
+@include for-desktop {
+  //our products hover
+  .our-products__link:hover {
+    border: 0.052vw solid transparent;
+    background-color: var(--red-color);
   }
-}
 
-//our products hover
-.our-products__link:hover {
-  border: 0.052vw solid transparent;
-  background-color: var(--red-color);
-}
+  .our-products__link:hover,
+  .our-products__link svg:hover {
+    fill: var(--light-color);
+  }
 
-.our-products__link:hover,
-.our-products__link svg:hover {
-  fill: var(--light-color);
-}
+  .our-product__item:hover {
+    background-color: var(--blue-color);
+  }
 
-.our-product__item:hover {
-  background-color: var(--blue-color);
-}
+  .our-products__item:hover .our-products__title {
+    font-size: 3.5vw;
+  }
 
-.our-products__item:hover .our-products__title {
-  font-size: 3.5vw;
-}
-
-.our-products__item:hover .our-products__img {
-  width: 29vw;
+  .our-products__item:hover .our-products__img {
+    width: 29vw;
+  }
 }

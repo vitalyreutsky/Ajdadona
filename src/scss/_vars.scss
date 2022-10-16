@@ -7,12 +7,6 @@
   --font-family-Carattere: "Carattere";
   --font-family-MavenPro: "MavenPro";
 
-  --content-width-min: 71.146vw;
-  --container-offset: 0.781vw;
-  --container-width: calc(
-    var(--content-width-min) + (var(--container-offset) * 2)
-  );
-
   // colors
   --light-color: #fff;
   --black-color: #363636;

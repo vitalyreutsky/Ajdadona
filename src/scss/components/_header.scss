@@ -5,8 +5,12 @@
   left: 0;
   width: 100%;
   background-color: var(--light-color);
-  border-bottom: 1px solid rgba(31, 30, 30, 0.1);
+  border-bottom: 0.051vw solid rgba(31, 30, 30, 0.1);
   z-index: 10;
+
+  &__feedback {
+    display: none;
+  }
 }
 .nav {
   &__list {
@@ -56,8 +60,10 @@
   }
 }
 
-.nav__item:hover svg,
-.nav__link:hover {
-  color: var(--red-color);
-  fill: var(--red-color);
+@include for-desktop {
+  .nav__item:hover svg,
+  .nav__link:hover {
+    color: var(--red-color);
+    fill: var(--red-color);
+  }
 }

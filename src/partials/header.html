@@ -1,20 +1,43 @@
-<header class="header">
-  <nav class="nav" title="nav-menu" data-scroll-header>
-    <ul class="nav__list list-reset">
-      <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+<header class="header fixed-block">
+  <button
+    class="burger"
+    aria-label="Открыть меню"
+    aria-expanded="false"
+    data-burger
+  >
+    <span class="burger__line"></span>
+  </button>
+
+  <nav class="nav" data-scroll-header>
+    <ul class="nav__list list-reset" data-menu>
       <li class="nav__item">
-        <a href="products-page.html" class="nav__link">Product</a>
+        <a href="index.html" class="nav__link" data-menu-item>Home</a>
       </li>
       <li class="nav__item">
-        <a href="about-page.html" class="nav__link">About us</a>
+        <a href="products-page.html" class="nav__link" data-menu-item
+          >Product</a
+        >
+      </li>
+      <li class="nav__item">
+        <a href="about-page.html" class="nav__link" data-menu-item>About us</a>
       </li>
       <li class="nav__item-logo">
-        <a href="#" class="nav__link nav__link-logo">
+        <a
+          href="#"
+          class="nav__link nav__link-logo"
+          data-menu-item
+          data-da=".header,768,1"
+        >
           <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
         </a>
       </li>
       <li class="nav__item nav__item-phone">
-        <a href="tel:+4879887312" class="nav__link nav__link-phone">
+        <a
+          href="tel:+4879887312"
+          class="nav__link nav__link-phone"
+          data-menu-item
+          data-da=".header,768,last"
+        >
           <svg>
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
@@ -30,6 +53,28 @@
           <option>FRA</option>
         </select>
       </li>
+
+      <div class="header__feedback">
+        <div class="header__form form">
+          <label class="form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset form__input form__input--name"
+              placeholder="Your name"
+            />
+          </label>
+          <label class="form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset form__input form__input--phone"
+              placeholder="Phone number"
+            />
+          </label>
+          <button class="btn-reset btn form__btn">Contact us</button>
+        </div>
+      </div>
     </ul>
   </nav>
 </header>

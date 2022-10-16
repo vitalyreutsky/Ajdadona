@@ -5,8 +5,9 @@
   &__inner {
     display: flex;
     height: 100%;
-    position: relative;
+    width: 100%;
     overflow: hidden;
+    position: relative;
     &::after {
       content: "";
       position: absolute;
@@ -38,6 +39,9 @@
   }
 
   &__title {
+    font-family: var(--font-family-Amiko);
+    font-weight: 700;
+    font-size: 2.865vw;
     position: relative;
     padding-bottom: 1.042vw;
     margin-bottom: 1.042vw;
@@ -47,6 +51,7 @@
       bottom: 0;
       left: 50%;
       transform: translate(-50%, -50%);
+      opacity: 0.6;
       width: 6.458vw;
       height: 0.052vw;
       background-color: var(--black-color);

@@ -21,7 +21,13 @@
     fill: var(--light-color);
   }
 
-  &:hover {
+  @include for-desktop {
+    &:hover {
+      background-color: var(--red-color);
+    }
+  }
+
+  &:focus {
     background-color: var(--red-color);
   }
 }

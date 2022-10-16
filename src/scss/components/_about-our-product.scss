@@ -1,5 +1,6 @@
 .about-our-product {
   margin-bottom: 8.333vw;
+  overflow: hidden;
 
   &__inner {
     position: relative;
@@ -34,10 +35,6 @@
   &__descr {
     width: 50%;
     padding-top: 1vw;
-
-    &:nth-child(2n + 1) {
-      margin-right: 2.501vw;
-    }
   }
 
   &__title {
@@ -59,7 +56,7 @@
     align-items: center;
     font-size: 1.146vw;
     line-height: 1.823vw;
-    color: var(--red-color);
+    color: var(--black-color);
     display: flex;
     width: fit-content;
     margin-left: auto;
@@ -67,18 +64,19 @@
     svg {
       width: 0.7vw;
       height: 0.7vw;
-      fill: var(--red-color);
+      fill: var(--black-color);
       margin-left: 0.3vw;
     }
   }
 
-  &__link:hover {
-    color: var(--black-color);
-    svg {
-      fill: var(--black-color);
+  @include for-desktop {
+    &__link:hover {
+      color: var(--red-color);
+      svg {
+        fill: var(--red-color);
+      }
     }
   }
-
   &__image {
     width: 50%;
     img {
@@ -87,9 +85,13 @@
       height: 100%;
       border-radius: 1.042vw;
     }
-
-    &:nth-child(2n) {
-      margin-right: 2.501vw;
-    }
   }
+}
+
+.about-our-product__item:nth-child(2n) .about-our-product__descr {
+  margin-right: 2.501vw;
+}
+
+.about-our-product__item:nth-child(2n + 1) .about-our-product__descr {
+  margin-left: 2.501vw;
 }
