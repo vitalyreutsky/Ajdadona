@@ -759,6 +759,30 @@ h6 {
     transform: rotate(-33deg);
   }
 }
+.simplebar-track.simplebar-vertical {
+  background-color: #e0e0e0;
+  width: 0.781vw;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 11.719vw;
+  background-color: var(--red-color);
+  opacity: 1;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
 .header {
   padding: 0.7vw 5.729vw;
   position: fixed;
@@ -3777,9 +3801,7 @@ h6 {
     border-top: 0;
   }
   .products__header {
-    height: 100%;
-    overflow: auto;
-    padding-bottom: 10vw;
+    max-height: 100%;
   }
   .products__items {
     width: 44.271vw;
