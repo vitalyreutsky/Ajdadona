@@ -63,37 +63,90 @@
 </head>
 
   <body class="page__body">
+    <button class="btn-reset scroll-btn">
+  <svg class="icon-scroll">
+    <use xlink:href="img/sprite.svg#top"></use>
+  </svg>
+</button>
+
     <div class="site-container">
-      <header class="header">
-  <nav class="nav" title="nav-menu">
-    <ul class="nav__list list-reset">
-      <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">Product</a></li>
-      <li class="nav__item"><a href="#" class="nav__link">About us</a></li>
+      <header class="header fixed-block">
+  <button
+    class="burger"
+    aria-label="Открыть меню"
+    aria-expanded="false"
+    data-burger
+  >
+    <span class="burger__line"></span>
+  </button>
+
+  <nav class="nav" data-scroll-header>
+    <ul class="nav__list list-reset" data-menu>
+      <li class="nav__item">
+        <a href="index.html" class="nav__link" data-menu-item>Home</a>
+      </li>
+      <li class="nav__item">
+        <a href="products-page.html" class="nav__link" data-menu-item
+          >Product</a
+        >
+      </li>
+      <li class="nav__item">
+        <a href="about-page.html" class="nav__link" data-menu-item>About us</a>
+      </li>
       <li class="nav__item-logo">
-        <a href="#" class="nav__link nav__link-logo">
-          <picture>
-            <source srcset="img/logo.avif" type="image/avif" />
-            <source srcset="img/logo.webp" type="image/webp" />
-            <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
-          </picture>
+        <a
+          href="#"
+          class="nav__link nav__link-logo"
+          data-menu-item
+          data-da=".header,768,1"
+        >
+          <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
         </a>
       </li>
       <li class="nav__item nav__item-phone">
-        <a href="tel:+4879887312" class="nav__link nav__link-phone">
+        <a
+          href="tel:+4879887312"
+          class="nav__link nav__link-phone"
+          data-menu-item
+          data-da=".header,768,last"
+        >
           <svg>
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
           487-98-873-12
         </a>
       </li>
-      <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+      <li class="nav__item">
+        <a href="contacts-page.html" class="nav__link">Contacts</a>
+      </li>
       <li class="nav__item nav__item-lang">
-        <select name="lang" class="lang">
-          <option>EN</option>
-          <option>FR</option>
+        <select class="lang">
+          <option>ENG</option>
+          <option>FRA</option>
         </select>
       </li>
+
+      <div class="header__feedback">
+        <div class="header__form form">
+          <label class="form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset form__input form__input--name"
+              placeholder="Your name"
+            />
+          </label>
+          <label class="form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset form__input form__input--phone"
+              placeholder="Phone number"
+            />
+          </label>
+          <button class="btn-reset btn form__btn">Contact us</button>
+        </div>
+      </div>
     </ul>
   </nav>
 </header>
@@ -116,29 +169,40 @@
     </div>
   </div>
 </section>
- <section class="our-products">
+ <section class="our-products" id="our-products">
   <div class="container our-products__container">
     <div class="titles">
       <h2 class="title">Our</h2>
       <h4 class="label">Products</h4>
     </div>
 
-    <img
-      loading="lazy"
-      src="img/boubles2.png"
-      class="our-products__boubles image"
-      alt="Decor"
-    />
+    <div class="our-products__decor">
+      <img
+        loading="lazy"
+        src="img/boubles2.png"
+        class="our-products__boubles image"
+        alt="Decor"
+      />
+
+      <img
+        loading="lazy"
+        src="img/pattern2.png"
+        class="our-products__pattern image"
+        alt="Decor"
+      />
+    </div>
 
     <div class="our-products__inner">
       <div class="our-products__item">
         <h3 class="our-products__title">Fish</h3>
-        <img
-          loading="lazy"
-          src="img/our_products1.png"
-          class="image our-products__img"
-          alt="Our products1"
-        />
+        <div class="our-products__img">
+          <img
+            loading="lazy"
+            src="img/our_products1.png"
+            class="image"
+            alt="Our products1"
+          />
+        </div>
         <a href="#" class="our-products__link">
           <svg>
             <use xlink:href="img/sprite.svg#right"></use>
@@ -148,12 +212,14 @@
 
       <div class="our-products__item">
         <h3 class="our-products__title">Meat</h3>
-        <img
-          loading="lazy"
-          src="img/our_products2.png"
-          class="image our-products__img"
-          alt="Our products1"
-        />
+        <div class="our-products__img">
+          <img
+            loading="lazy"
+            src="img/our_products2.png"
+            class="image"
+            alt="Our products1"
+          />
+        </div>
         <a href="#" class="our-products__link">
           <svg>
             <use xlink:href="img/sprite.svg#right"></use>
@@ -163,12 +229,14 @@
 
       <div class="our-products__item">
         <h3 class="our-products__title">Seafood</h3>
-        <img
-          loading="lazy"
-          src="img/our_products3.png"
-          class="image our-products__img"
-          alt="Our products1"
-        />
+        <div class="our-products__img">
+          <img
+            loading="lazy"
+            src="img/our_products3.png"
+            class="image"
+            alt="Our products1"
+          />
+        </div>
         <a href="#" class="our-products__link">
           <svg>
             <use xlink:href="img/sprite.svg#right"></use>
@@ -178,12 +246,14 @@
 
       <div class="our-products__item">
         <h3 class="our-products__title">Shellfish</h3>
-        <img
-          loading="lazy"
-          src="img/our_products4.png"
-          class="image our-products__img"
-          alt="Our products1"
-        />
+        <div class="our-products__img">
+          <img
+            loading="lazy"
+            src="img/our_products4.png"
+            class="image"
+            alt="Our products1"
+          />
+        </div>
         <a href="#" class="our-products__link">
           <svg>
             <use xlink:href="img/sprite.svg#right"></use>
@@ -191,13 +261,6 @@
         </a>
       </div>
     </div>
-
-    <img
-      loading="lazy"
-      src="img/pattern.png"
-      class="our-products__pattern image"
-      alt="Decor"
-    />
   </div>
 </section>
 
@@ -226,7 +289,10 @@
         this time that Thailand’s seafood industry was entering a period of
         dynamic growth, fuelled by the rapid expansion of aqua-cultured shrimp.
         Siam Canadian saw the tremendous growth opportunities in the seafood
-        business and thus frozen seafood soon became its core business.
+        business and thus frozen seafood soon became its core business. To
+        monitor the effect of nature restoration projects in North Sea. DNA
+        metabarcoding from seawater is becoming. Siam Canadian saw the
+        tremendous growth.
       </p>
       <a href="#" class="about-company__link">Reed more</a>
     </div>
@@ -237,6 +303,17 @@
 </section>
 
         <section class="our-offices">
+  <div class="our-offices__sea">
+    <img loading="lazy" src="img/sea.jpg" class="image" alt="Sea" />
+  </div>
+
+  <img
+    loading="lazy"
+    src="img/subtract.png"
+    class="our-offices__subtract image"
+    alt="Subtract"
+  />
+
   <div class="container">
     <div class="titles">
       <h2 class="title">Our</h2>
@@ -397,7 +474,7 @@
   </div>
 
   <div class="feedback__form">
-    <form class="form">
+    <div class="form">
       <label class="form__label">
         <input
           type="text"
@@ -415,13 +492,14 @@
         />
       </label>
       <button class="btn-reset btn form__btn">Contact us</button>
-    </form>
+    </div>
   </div>
 </section>
 
         <section
   class="certificates"
   style="background-image: url(img/certificates-bg.jpg)"
+  id="certificates"
 >
   <div class="titles">
     <h2 class="title">Our</h2>
@@ -486,17 +564,35 @@
       <h4 class="label">Product</h4>
     </div>
     <div class="about-our-product__inner">
+      <div class="about-our-product__decor">
+        <img
+          loading="lazy"
+          src="img/pattern2.png"
+          class="about-our-product__pattern image"
+          alt="Decor"
+        />
+      </div>
+
       <div class="about-our-product__item">
         <div class="about-our-product__descr">
           <h3 class="about-our-product__title">Fish & Meat</h3>
           <p class="about-our-product__text">
-            To monitor the effect of nature restoration projects in North Sea
-            ecosystems, accurate and intensive biodiversity assessments are
-            vital. <br />
-            DNA based techniques and especially environmental DNA metabarcoding
-            from seawater is becoming a powerful monitoring tool.
+            Siam Canadian also added its International Trading Division at its
+            Bangkok headquarters which facilitates procurement of products from
+            countries where Siam Canadian does not maintain its own offices.
+            Siam Canadian currently maintains offices in 8 Countries and
+            additionally procures product from North America, Europe, Korea,
+            Japan, as well as Bangladesh, where it maintains an associate
+            office. Siam Canadian also operates separate import/distribution
+            companies in Guangzhou, China and Bangkok, Thailand — importing a
+            wide range of high quality frozen seafood and other food items.
           </p>
-          <a href="#" class="about-our-product__link">Discover more</a>
+          <a href="#" class="about-our-product__link">
+            <span> Read more </span>
+            <svg>
+              <use xlink:href="img/sprite.svg#right"></use>
+            </svg>
+          </a>
         </div>
         <div class="about-our-product__image">
           <img
@@ -510,14 +606,23 @@
 
       <div class="about-our-product__item">
         <div class="about-our-product__descr">
-          <h3 class="about-our-product__title">Fish & Meat</h3>
+          <h3 class="about-our-product__title">Distribution company</h3>
           <p class="about-our-product__text">
-            To monitor the effect of nature restoration projects in North Sea
-            ecosystems, accurate and intensive biodiversity assessments are
-            vital. <br />
-            DNA based techniques and especially environmental DNA metabarcoding
-            from seawater is becoming a powerful monitoring tool.
+            Siam Canadian also added its International Trading Division at its
+            Bangkok headquarters which facilitates procurement of products from
+            countries where Siam Canadian does not maintain its own offices.
+            Siam Canadian currently maintains offices in 8 Countries and
+            additionally procures product from North America, Europe, Korea,
+            Japan, as well as Bangladesh, where it maintains an associate
+            office. Siam Canadian also operates separate import/distribution
+            companies in Guangzhou, China and Bangkok.
           </p>
+          <a href="#" class="about-our-product__link">
+            <span> Read more </span>
+            <svg>
+              <use xlink:href="img/sprite.svg#right"></use>
+            </svg>
+          </a>
         </div>
         <div class="about-our-product__image">
           <img
@@ -612,6 +717,73 @@
 </section>
 
       </main>
+      <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__inner">
+      <div class="footer__left social">
+        <a href="#" class="social__logo">
+          <img
+            loading="lazy"
+            src="img/footer-logo.png"
+            class="image"
+            alt="Logo"
+          />
+        </a>
+        <a href="tel:+4879887312" class="social__link social__link--phone">
+          <svg>
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+          487-98-873-12
+        </a>
+        <a
+          href="mailto:testmail@gmal.com"
+          class="social__link social__link--mail"
+        >
+          <svg>
+            <use xlink:href="img/sprite.svg#mail"></use>
+          </svg>
+          testmail@gmal.com
+        </a>
+      </div>
+      <div class="footer__center">
+        <nav class="footer-nav">
+          <ul class="footer-nav__list list-reset">
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Home</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Product</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">About us</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Our offices</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#certificates" class="footer-nav__link">Certificates</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#our-products" class="footer-nav__link">Our products</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__right map">
+        <a href="#" class="map__image">
+          <img loading="lazy" src="img/map.jpg" class="image" alt="Map" />
+        </a>
+        <svg>
+          <use xlink:href="img/sprite.svg#icon-fish"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright copyright">
+    <h3 class="copyright__title">Copyright © 2022</h3>
+  </div>
+</footer>
+
     </div>
   </body>
 </html>
