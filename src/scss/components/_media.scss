@@ -1283,55 +1283,42 @@
 
     &__images {
       grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 2vw;
-      grid-row-gap: 2vw;
-      margin-bottom: 5vw;
+      margin-bottom: 11.719vw;
     }
 
     &__img {
       object-position: 0;
+      width: 100%;
+      height: 100%;
       border-radius: 1.5vw;
       &:nth-child(1) {
-        grid-area: 1 / 1 / 7 / 2;
-        height: 52.083vw;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        grid-row: 1 / 9;
       }
 
       &:nth-child(2) {
-        grid-area: 2/2/2/3;
-        height: 25vw;
-        object-position: 50%;
+        grid-row: 5 / 9;
       }
 
       &:nth-child(3) {
-        grid-area: 1 / 2 / 4 / 3;
-        height: 25vw;
-        object-position: 50%;
+        grid-row: 1 / 5;
       }
 
       &:nth-child(4) {
-        grid-area: 1 / 3 / 5 / 4;
-        height: 36.5vw;
+        grid-row: 1 / 7;
       }
 
       &:nth-child(5) {
-        grid-area: 1 / 4 / 3 / 5;
-        height: 17vw;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        grid-row: 1 / 4;
       }
 
       &:nth-child(6) {
-        grid-area: 2/4/2/4;
-        height: 17vw;
-        margin-top: -8vw;
+        grid-row: 4 / 7;
+        grid-area: auto;
       }
 
       &:nth-child(7) {
-        grid-area: 3/3/3/5;
-        height: 13.411vw;
-        margin-top: -15.5vw;
+        grid-row: 7 / 9;
+        grid-column: 3 / 5;
       }
     }
 
