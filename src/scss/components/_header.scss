@@ -58,6 +58,10 @@
     display: flex;
     align-items: center;
   }
+
+  &__link-phone--show {
+    display: none !important;
+  }
 }
 
 @include for-desktop {
