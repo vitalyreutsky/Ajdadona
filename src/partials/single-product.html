@@ -43,8 +43,49 @@
       <h2 class="title">Our</h2>
       <h4 class="label">Products</h4>
     </div>
+
+    <div class="products__category-top">
+      <h2 class="products__category-title">
+        Fish
+        <span>(13)</span>
+      </h2>
+      <div class="tabs__nav products__btns">
+        <button
+          class="products__btn products__btn-category btn btn-reset"
+          type="button"
+        >
+          Category
+          <svg>
+            <use xlink:href="img/sprite.svg#filter"></use>
+          </svg>
+        </button>
+
+        <button class="products__btn btn btn-reset" type="button">
+          Clear
+          <svg class="clear">
+            <use xlink:href="img/sprite.svg#clear"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="products__show-menu">
+      <div class="products__show-top">
+        <h3 class="products__show-title">Category</h3>
+        <button class="btn-reset products__show-btn--close">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <div class="products__inner">
-      <div class="tab-header products__header">
+      <div
+        class="tab-header products__header"
+        data-da=".products__show-menu,768,1"
+        data-simplebar
+      >
         <aside class="tab-header__items products__items">
           <div class="tab-header__item product__item">
             <div class="product__item-kind">
@@ -190,32 +231,32 @@
             </ul>
           </div>
         </aside>
+      </div>
 
-        <div class="single-product__content">
-          <div class="single-product__card">
-            <div class="single-product__card-image">
-              <img
-                loading="lazy"
-                src="img/product1.jpg"
-                class="image"
-                alt="Product"
-              />
-            </div>
-            <div class="single-product__card-descr">
-              <ul class="single-product__card-list list-reset">
-                <li class="single-product__card-item">Whole GGS</li>
-                <li class="single-product__card-item">Fillets SO/SL</li>
-              </ul>
-            </div>
-            <h3 class="single-product__card-title">Salmon</h3>
+      <div class="single-product__content">
+        <div class="single-product__card">
+          <div class="single-product__card-image">
+            <img
+              loading="lazy"
+              src="img/product1.jpg"
+              class="image"
+              alt="Product"
+            />
           </div>
-          <a
-            href="products-page.html"
-            class="btn-reset btn form__btn single-product__btn"
-          >
-            Back
-          </a>
+          <div class="single-product__card-descr">
+            <ul class="single-product__card-list list-reset">
+              <li class="single-product__card-item">Whole GGS</li>
+              <li class="single-product__card-item">Fillets SO/SL</li>
+            </ul>
+          </div>
+          <h3 class="single-product__card-title">Salmon</h3>
         </div>
+        <a
+          href="products-page.html"
+          class="btn-reset btn form__btn single-product__btn"
+        >
+          Back
+        </a>
       </div>
     </div>
   </div>

@@ -72,20 +72,20 @@
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 100vh;
     transition: all 0.1s ease-in-out;
     z-index: 4;
     opacity: 0;
     visibility: hidden;
+    overflow: auto;
 
     &__list {
       width: 53.776vw;
-      height: 100vh;
+      min-height: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-      padding: 0 3vw 9vw;
+      padding: 9vw 3vw 9vw;
       background-color: var(--light-color);
 
       transform: translateX(-100%);
@@ -138,7 +138,7 @@
       font-size: 2.604vw;
       font-weight: 600;
       line-height: 2.995vw;
-      padding-right: 0;
+      padding-right: 3vw;
       svg {
         width: 2.344vw;
         height: 2.344vw;
@@ -593,8 +593,6 @@
       align-items: center;
       height: 7.427vw;
       padding: 0.729vw 3.802vw;
-      border-radius: 0.521vw;
-      line-height: 1.771vw;
       font-weight: 600;
       font-size: 2.604vw;
       line-height: 4.427vw;
@@ -932,12 +930,306 @@
   .scroll-btn {
     right: 3vw;
     bottom: 3vw;
-    width: 7vw;
-    height: 7vw;
+    width: 8vw;
+    height: 8vw;
 
     .icon-scroll {
-      width: 3vw;
-      height: 3vw;
+      width: 4vw;
+      height: 4vw;
+    }
+  }
+
+  //!breadcrumbs
+  .breadcrumbs {
+    padding-top: 12vw;
+
+    &__item-main {
+      &:not(:last-child) {
+        padding-right: 1.885vw;
+        margin-right: 1.885vw;
+      }
+    }
+
+    &__link {
+      font-size: 2.084vw;
+      line-height: 2.344vw;
+    }
+  }
+
+  //!catalog
+  .products {
+    padding-bottom: 36.004px;
+
+    &__category-top {
+      display: block;
+      padding-top: 3.255vw;
+      border-top: 0.052vw solid #eae6e6;
+    }
+
+    &__category-title {
+      font-weight: 700;
+      font-size: 4.948vw;
+      line-height: 5.729vw;
+      text-align: center;
+      margin-bottom: 3.255vw;
+      span {
+        font-weight: 500;
+        font-size: 2.344vw;
+        line-height: 2.734vw;
+        color: rgba(0, 0, 0, 0.47);
+      }
+    }
+
+    &__show-menu {
+      padding: 5.208vw 3vw;
+      transform: translateX(-100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--light-color);
+      z-index: 100;
+    }
+
+    &__btns {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--black-color);
+      font-size: 2.604vw;
+      line-height: 4.427vw;
+      border: 1px solid var(--black-color);
+      border-radius: 1.302vw;
+      width: 44.792vw;
+      height: 7.813vw;
+      transition: all 0.3s ease-in-out;
+      svg {
+        fill: var(--black-color);
+        width: 3vw;
+        height: 3vw;
+        margin-left: 2vw;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:focus {
+        color: var(--light-color);
+        background-color: var(--red-color);
+      }
+
+      &:focus svg {
+        fill: var(--light-color);
+      }
+    }
+
+    &__show-btn--close {
+      position: absolute;
+      top: 3vw;
+      right: 3vw;
+      z-index: 3;
+      svg {
+        width: 3.906vw;
+        height: 3.906vw;
+      }
+    }
+
+    &__show-title {
+      text-align: center;
+      font-family: var(--font-family-Book-antiqua);
+      font-weight: 400;
+      font-size: 6.25vw;
+      line-height: 7.552vw;
+      text-transform: uppercase;
+      margin-bottom: 5.208vw;
+    }
+
+    &__inner {
+      padding: 10.417vw 0;
+      border-bottom: 0;
+      border-top: 0;
+    }
+
+    &__header {
+      height: 100%;
+      overflow: auto;
+    }
+
+    &__items {
+      width: 44.271vw;
+    }
+
+    &__boubles {
+      bottom: 53.76px;
+      left: 107.52px;
+      width: 159.206px;
+      height: 194.004px;
+    }
+
+    &__pattern {
+      top: 130.56px;
+      right: 38.4px;
+      width: 102.405px;
+      height: 60.004px;
+    }
+
+    &__content {
+      grid-column-gap: 2.604vw;
+      grid-row-gap: 6.51vw;
+    }
+  }
+
+  .product {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 19.999px;
+      }
+
+      &:last-child {
+        padding-bottom: 15vw;
+      }
+    }
+
+    &__item-kind {
+      margin-bottom: 5.998px;
+    }
+
+    &__item-title {
+      font-size: 4.948vw;
+      line-height: 5.729vw;
+      span {
+        margin: 0 auto 0 2vw;
+        font-size: 2.344vw;
+        line-height: 2.734vw;
+      }
+
+      svg {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+
+    &__item-link {
+      &:not(:last-child) {
+        margin-bottom: 1.953vw;
+      }
+      a {
+        font-size: 3.125vw;
+        line-height: 3.646vw;
+      }
+    }
+
+    &__card {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__card-image {
+      border-radius: 2.302vw;
+    }
+
+    &__card-title {
+      font-size: 2.604vw;
+      line-height: 4.427vw;
+      bottom: -2vw;
+      width: 35.938vw;
+      height: 5.208vw;
+      border-radius: 5.469vw;
+    }
+  }
+
+  .filter-menu--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  //!single product
+  .single-product {
+    padding-bottom: 11.719vw;
+    .products__inner {
+      padding-bottom: 0;
+    }
+
+    .products__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__boubles {
+      bottom: 7.68px;
+      left: 107.52px;
+      width: 120.806px;
+      height: 155.604px;
+    }
+
+    &__pattern {
+      top: 192px;
+      right: 46.08px;
+      width: 102.405px;
+      height: 60.004px;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__card {
+      width: 100%;
+      margin-bottom: 7.813vw;
+    }
+
+    &__card-image {
+      img {
+        border-top-left-radius: 1.702vw;
+        border-bottom-left-radius: 1.702vw;
+      }
+    }
+
+    &__card-descr {
+      padding: 6.641vw 2.604vw;
+      border-top-right-radius: 1.702vw;
+      border-bottom-right-radius: 1.702vw;
+    }
+
+    &__card-item {
+      position: relative;
+      padding-left: 2vw;
+      font-size: 2.605vw;
+      line-height: 4.427vw;
+      &:not(:last-child) {
+        margin-bottom: 0.781vw;
+      }
+      &::before {
+        width: 0.7vw;
+        height: 0.7vw;
+      }
+    }
+
+    &__card-title {
+      font-size: 2.605vw;
+      line-height: 4.427vw;
+      top: -2.7vw;
+      min-width: 28.776vw;
+      height: 5.208vw;
+      border-radius: 5.469vw;
+    }
+
+    &__btn {
+      width: 60.677vw;
+      height: 7.427vw;
+      padding: 0.729vw 3.802vw;
+      font-weight: 600;
+      font-size: 2.604vw;
+      line-height: 4.427vw;
+      border-radius: 1.302vw;
     }
   }
 }

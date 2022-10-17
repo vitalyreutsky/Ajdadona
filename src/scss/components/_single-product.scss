@@ -2,7 +2,7 @@
   padding-bottom: 5vw;
   position: relative;
   .products__inner {
-    display: block;
+    display: flex;
     padding-bottom: 15vw;
   }
 
@@ -34,7 +34,7 @@
   &__card {
     position: relative;
     width: 53.021vw;
-    height: 18.229vw;
+    height: auto;
     display: flex;
     margin-bottom: 3.125vw;
   }
@@ -60,9 +60,9 @@
   &__card-item {
     &:not(:last-child) {
       margin-bottom: 0.781vw;
-      font-size: 1.042vw;
-      line-height: 1.771vw;
     }
+    font-size: 1.042vw;
+    line-height: 1.771vw;
     position: relative;
     padding-left: 1vw;
     &::before {
@@ -88,6 +88,7 @@
     background-color: var(--black-color);
     color: var(--light-color);
     width: 20.833vw;
+    padding: 1vw 1vw;
     height: 2.083vw;
     border-radius: 2.188vw;
     display: flex;
@@ -97,9 +98,11 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10.833vw;
     height: 3.125vw;
-    display: block;
     margin: 0 auto;
   }
 }

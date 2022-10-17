@@ -6,3 +6,5 @@ import "./components/tabs";
 import "./components/count";
 import "./components/burger";
 import "./components/dynamic-adapt";
+import "./components/catalog-menu";
+import "./components/custom-scroll";

@@ -1,0 +1,31 @@
+.simplebar-wrapper {
+  overflow: hidden;
+  width: 13vw;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+.simplebar-track.simplebar-vertical {
+  background-color: #e0e0e0;
+  width: 0.781vw;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: var(--red-color);
+  opacity: 1;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}

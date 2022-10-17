@@ -26,3 +26,11 @@
 .product__item-title.tab-header__item--active svg {
   transform: rotate(180deg);
 }
+
+.dropdown--active {
+  display: block !important;
+}
+
+.product__item-menu {
+  display: none;
+}
