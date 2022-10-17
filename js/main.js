@@ -1152,6 +1152,7 @@ if (workSection) {
     const [entry] = entries;
     if (!entry.isIntersecting) return;
     printNumbers();
+    observer.unobserve(workSection);
   }, {
     root: null,
     threshold: 0
@@ -1172,9 +1173,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
 // Подключение плагина кастом-скролла
 
-new simplebar__WEBPACK_IMPORTED_MODULE_0__["default"](document.querySelector(".products__header"), {
-  autoHide: false
-});
+const sectionProductsScroll = document.querySelector(".products");
+const sectionProductScroll = document.querySelector(".single-product");
+
+if (sectionProductScroll) {
+  new simplebar__WEBPACK_IMPORTED_MODULE_0__["default"](document.querySelector(".products__header"), {
+    autoHide: false
+  });
+}
+
+if (sectionProductsScroll) {
+  new simplebar__WEBPACK_IMPORTED_MODULE_0__["default"](document.querySelector(".products__header"), {
+    autoHide: false
+  });
+}
 
 /***/ }),
 
@@ -1525,10 +1537,6 @@ if (sectionProducts) {
       item.classList.add("hide");
       item.classList.remove("show-tabs-content");
     });
-    tabsMenu.forEach(item => {
-      item.classList.add("hide");
-      item.classList.remove("show-tabs-menu");
-    });
     tabs.forEach(item => {
       item.classList.remove("tab-header__item--active");
     });
@@ -1539,8 +1547,6 @@ if (sectionProducts) {
     tabsContent[i].classList.add("show-tabs-content");
     tabsContent[i].classList.remove("hide");
     tabs[i].classList.add("tab-header__item--active");
-    tabsMenu[i].classList.toggle("show-tabs-menu");
-    tabsMenu[i].classList.remove("hide");
   }
 
   hideTabContent();
@@ -1565,10 +1571,6 @@ if (sectionProduct) {
       item.classList.add("hide");
       item.classList.remove("show-tabs-content");
     });
-    tabsMenu.forEach(item => {
-      item.classList.add("hide");
-      item.classList.remove("show-tabs-menu");
-    });
     tabs.forEach(item => {
       item.classList.remove("tab-header__item--active");
     });
@@ -1576,8 +1578,7 @@ if (sectionProduct) {
 
   function showTabContent() {
     let i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    tabsContent[i].classList.add("show-tabs-content");
-    tabsContent[i].classList.remove("hide");
+    tabs[i].classList.add("tab-header__item--active");
   }
 
   hideTabContent();
@@ -1590,14 +1591,43 @@ if (sectionProduct) {
         if (target == item) {
           hideTabContent();
           showTabContent(i);
-          tabsMenu[i].classList.toggle("show-tabs-menu");
-          tabsMenu[i].classList.remove("hide");
-          tabs[i].classList.add("tab-header__item--active");
         }
       });
     }
   });
-}
+} //function tabs
+
+
+const menuBtns = document.querySelectorAll(".product__item-title");
+const drops = document.querySelectorAll(".product__item-menu");
+menuBtns.forEach(el => {
+  el.addEventListener("click", e => {
+    let currentBtn = e.currentTarget;
+    let drop = currentBtn.closest(".product__item").querySelector(".product__item-menu");
+    menuBtns.forEach(el => {
+      if (el !== currentBtn) {
+        el.classList.remove("tab-header__item--active");
+      }
+    });
+    drops.forEach(el => {
+      if (el !== drop) {
+        el.classList.remove("dropdown--active");
+      }
+    });
+    drop.classList.toggle("dropdown--active");
+    currentBtn.classList.add("tab-header__item--active");
+  });
+});
+document.addEventListener("click", e => {
+  if (!e.target.closest(".products__items")) {
+    menuBtns.forEach(el => {
+      el.classList.remove("tab-header__item--active");
+    });
+    drops.forEach(el => {
+      el.classList.remove("dropdown--active");
+    });
+  }
+});
 
 /***/ }),
 
