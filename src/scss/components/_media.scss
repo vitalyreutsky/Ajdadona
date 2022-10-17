@@ -1394,4 +1394,71 @@
       line-height: 3.646vw;
     }
   }
+
+  //!contacts
+
+  .contacts {
+    padding-bottom: 11.719vw;
+
+    &__bg {
+      height: 120vw;
+    }
+
+    &__map {
+      width: 50%;
+      border-top-right-radius: 2vw;
+      border-bottom-right-radius: 2vw;
+      svg {
+        top: 50%;
+        left: 50%;
+        width: 7vw;
+        height: 7vw;
+        transform: translate(-50%, -50%);
+      }
+
+      &::after {
+        top: 58%;
+        left: 50%;
+        width: 4.527vw;
+        height: 0.3vw;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__map-image {
+      width: 100%;
+      border-top-right-radius: 5.376px;
+      border-bottom-right-radius: 5.376px;
+      img {
+        transform: translateX(0);
+        border-top-right-radius: 5.376px;
+        border-bottom-right-radius: 5.376px;
+      }
+    }
+
+    .our-offices__cards {
+      display: flex;
+      flex-direction: column;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .our-offices__item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 6.51vw;
+      }
+    }
+
+    .office-card {
+      background-color: var(--light-color);
+      backdrop-filter: none;
+      &__info {
+        padding: 5.469vw 5.99vw;
+      }
+    }
+  }
 }
