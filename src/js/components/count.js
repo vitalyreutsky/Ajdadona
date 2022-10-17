@@ -94,7 +94,10 @@ if (workSection) {
       if (!entry.isIntersecting) return;
 
       printNumbers();
+
+      observer.unobserve(workSection);
     },
+
     {
       root: null,
       threshold: 0,
