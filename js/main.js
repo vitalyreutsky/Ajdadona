@@ -1465,11 +1465,11 @@ const certificatesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".
       slidesPerView: 1.7,
       slidesPerGroup: 1
     },
-    375: {
+    600: {
       slidesPerView: 2.5,
       slidesPerGroup: 1
     },
-    768: {
+    1200: {
       slidesPerView: 5,
       slidesPerGroup: 1
     }
@@ -1500,13 +1500,13 @@ const offersSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".offers
       loop: true,
       centeredSlides: true
     },
-    375: {
+    600: {
       slidesPerView: 1.8,
       slidesPerGroup: 1,
       loop: true,
       centeredSlides: true
     },
-    768: {
+    1200: {
       slidesPerView: 3.1,
       slidesPerGroup: 1,
       loop: false,
@@ -1617,17 +1617,16 @@ menuBtns.forEach(el => {
     drop.classList.toggle("dropdown--active");
     currentBtn.classList.add("tab-header__item--active");
   });
-});
-document.addEventListener("click", e => {
-  if (!e.target.closest(".products__items")) {
-    menuBtns.forEach(el => {
-      el.classList.remove("tab-header__item--active");
-    });
-    drops.forEach(el => {
-      el.classList.remove("dropdown--active");
-    });
-  }
-});
+}); //document.addEventListener("click", (e) => {
+//  if (!e.target.closest(".products__items")) {
+//    menuBtns.forEach((el) => {
+//      el.classList.remove("tab-header__item--active");
+//    });
+//    drops.forEach((el) => {
+//      el.classList.remove("dropdown--active");
+//    });
+//  }
+//});
 
 /***/ }),
 
