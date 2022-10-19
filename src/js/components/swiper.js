@@ -1,11 +1,4 @@
-import Swiper, {
-  EffectFade,
-  Keyboard,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  Thumbs,
-} from "swiper";
+import Swiper, { Keyboard, Navigation, Pagination } from "swiper";
 
 //certificates-swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
@@ -28,14 +21,14 @@ const certificatesSwiper = new Swiper(".certificates__swiper", {
 
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.7,
       slidesPerGroup: 1,
     },
-    375: {
+    600: {
       slidesPerView: 2.5,
       slidesPerGroup: 1,
     },
-    768: {
+    1200: {
       slidesPerView: 5,
       slidesPerGroup: 1,
     },
@@ -65,18 +58,18 @@ const offersSwiper = new Swiper(".offers__swiper", {
 
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.3,
       slidesPerGroup: 1,
       loop: true,
       centeredSlides: true,
     },
-    375: {
+    600: {
       slidesPerView: 1.8,
       slidesPerGroup: 1,
       loop: true,
       centeredSlides: true,
     },
-    768: {
+    1200: {
       slidesPerView: 3.1,
       slidesPerGroup: 1,
       loop: false,

@@ -53,6 +53,7 @@
     grid-template-rows: 1fr;
     grid-column-gap: 1.25vw;
     grid-row-gap: 3.646vw;
+    height: fit-content;
   }
 }
 
@@ -63,18 +64,16 @@
     }
   }
 
-  &__item-kind {
+  &__item-title,
+  &__item--subtitle {
     margin-bottom: 0.781vw;
-  }
-
-  &__item-title {
     display: flex;
     align-items: center;
     color: var(--black-color);
     font-size: 1.979vw;
     font-weight: 700;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
     span {
       margin: 0 auto 0 0.521vw;
       font-weight: 500;
@@ -92,6 +91,12 @@
     }
   }
 
+  &__item--subtitle {
+    justify-content: space-between;
+    font-size: 1.458vw;
+    line-height: 1.719vw;
+  }
+
   &__item-link {
     &:not(:last-child) {
       margin-bottom: 0.781vw;
@@ -106,6 +111,12 @@
           color: var(--red-color);
         }
       }
+    }
+  }
+
+  &__item--submenu {
+    &:not(:last-child) {
+      margin-bottom: 1.563vw;
     }
   }
 

@@ -79,6 +79,9 @@
   }
   &__image {
     width: 50%;
+    &--show {
+      display: none;
+    }
     img {
       width: 34.948vw;
       height: 27.5vw;

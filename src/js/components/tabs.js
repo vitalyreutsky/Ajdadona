@@ -11,7 +11,7 @@ if (sectionProducts) {
   function hideTabContent() {
     tabsContent.forEach((item) => {
       item.classList.add("hide");
-      item.classList.remove("show-tabs-content");
+      item.classList.remove("show-tabs-content", "fade");
     });
 
     tabs.forEach((item) => {
@@ -20,7 +20,7 @@ if (sectionProducts) {
   }
 
   function showTabContent(i = 0) {
-    tabsContent[i].classList.add("show-tabs-content");
+    tabsContent[i].classList.add("show-tabs-content", "fade");
     tabsContent[i].classList.remove("hide");
 
     tabs[i].classList.add("tab-header__item--active");
@@ -42,74 +42,27 @@ if (sectionProducts) {
   });
 }
 
-if (sectionProduct) {
-  function hideTabContent() {
-    tabsContent.forEach((item) => {
-      item.classList.add("hide");
-      item.classList.remove("show-tabs-content");
-    });
+//sub menu
+let itemMenuOpen = document.querySelectorAll(".product__item-title");
+for (i = 0; i < itemMenuOpen.length; i++) {
+  let subMenu = itemMenuOpen[i].nextElementSibling;
+  let thisitemMenuOpen = itemMenuOpen[i];
 
-    tabs.forEach((item) => {
-      item.classList.remove("tab-header__item--active");
-    });
-  }
+  itemMenuOpen[i].addEventListener("click", function () {
+    subMenu.classList.toggle("show-tabs-menu");
+    thisitemMenuOpen.classList.toggle("tab-header__item--active");
 
-  function showTabContent(i = 0) {
-    tabs[i].classList.add("tab-header__item--active");
-  }
-
-  hideTabContent();
-  showTabContent();
-
-  tabsParent.addEventListener("click", function (event) {
-    const target = event.target;
-    if (target.classList.contains("product__item-title")) {
-      tabs.forEach((item, i) => {
-        if (target == item) {
-          hideTabContent();
-          showTabContent(i);
-        }
-      });
-    }
+    subMenu.classList.toggle("fade");
   });
 }
 
-//function tabs
-const menuBtns = document.querySelectorAll(".product__item-title");
-const drops = document.querySelectorAll(".product__item-menu");
-
-menuBtns.forEach((el) => {
-  el.addEventListener("click", (e) => {
-    let currentBtn = e.currentTarget;
-    let drop = currentBtn
-      .closest(".product__item")
-      .querySelector(".product__item-menu");
-
-    menuBtns.forEach((el) => {
-      if (el !== currentBtn) {
-        el.classList.remove("tab-header__item--active");
-      }
-    });
-
-    drops.forEach((el) => {
-      if (el !== drop) {
-        el.classList.remove("dropdown--active");
-      }
-    });
-
-    drop.classList.toggle("dropdown--active");
-    currentBtn.classList.add("tab-header__item--active");
+let itemSubMenuOpen = document.querySelectorAll(".product__item--subtitle");
+for (i = 0; i < itemSubMenuOpen.length; i++) {
+  itemSubMenuOpen[i].addEventListener("click", function (e) {
+    if (e.target.classList.contains("product__item--subtitle")) {
+      e.target.classList.toggle("tab-header__item--active");
+      e.target.nextElementSibling.classList.toggle("show-tabs-menu");
+      e.target.nextElementSibling.classList.toggle("fade");
+    }
   });
-});
-
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".products__items")) {
-    menuBtns.forEach((el) => {
-      el.classList.remove("tab-header__item--active");
-    });
-
-    drops.forEach((el) => {
-      el.classList.remove("dropdown--active");
-    });
-  }
-});
+}
