@@ -499,6 +499,30 @@ h6 {
   display: none !important;
 }
 
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .tab-header__item--active {
   color: var(--red-color) !important;
 }
@@ -518,11 +542,22 @@ h6 {
   transform: rotate(180deg);
 }
 
+.product__item--subtitle.tab-header__item--active svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.product__item--subtitle.tab-header__item--active {
+  color: inherit !important;
+}
+
 .dropdown--active {
   display: block !important;
 }
 
-.product__item-menu {
+.product__item-menu,
+.product__item--submenu {
   display: none;
 }
 
@@ -1174,8 +1209,8 @@ h6 {
 .our-offices__sea img {
   width: 100%;
   height: 100%;
-  -webkit-animation: sea 25s ease-in-out infinite;
-  animation: sea 25s ease-in-out infinite;
+  -webkit-animation: sea 10s ease-in-out infinite;
+  animation: sea 10s ease-in-out infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
@@ -2051,15 +2086,16 @@ h6 {
   grid-template-rows: 1fr;
   grid-column-gap: 1.25vw;
   grid-row-gap: 3.646vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .product__item:not(:last-child) {
   margin-bottom: 2.604vw;
 }
-.product__item-kind {
+.product__item-title, .product__item--subtitle {
   margin-bottom: 0.781vw;
-}
-.product__item-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2069,12 +2105,12 @@ h6 {
   color: var(--black-color);
   font-size: 1.979vw;
   font-weight: 700;
-  cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
-.product__item-title span {
+.product__item-title span, .product__item--subtitle span {
   margin: 0 auto 0 0.521vw;
   font-weight: 500;
   font-size: 0.938vw;
@@ -2082,13 +2118,20 @@ h6 {
   color: rgba(0, 0, 0, 0.47);
   pointer-events: none;
 }
-.product__item-title svg {
+.product__item-title svg, .product__item--subtitle svg {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 1.042vw;
   height: 1.042vw;
   pointer-events: none;
+}
+.product__item--subtitle {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 1.458vw;
+  line-height: 1.719vw;
 }
 .product__item-link:not(:last-child) {
   margin-bottom: 0.781vw;
@@ -2105,6 +2148,9 @@ h6 {
   .product__item-link a:hover {
     color: var(--red-color);
   }
+}
+.product__item--submenu:not(:last-child) {
+  margin-bottom: 1.563vw;
 }
 .product__card {
   position: relative;
@@ -2711,36 +2757,37 @@ h6 {
     height: 7.813vw;
     font-size: 2.604vw;
     line-height: 2.995vw;
+    padding: 1vw 3vw;
   }
   .header__feedback .form__input--name::-webkit-input-placeholder {
-    background-position: 12vw;
+    background-position: 10vw;
   }
   .header__feedback .form__input--name::-moz-placeholder {
-    background-position: 12vw;
+    background-position: 10vw;
   }
   .header__feedback .form__input--name:-ms-input-placeholder {
-    background-position: 12vw;
+    background-position: 10vw;
   }
   .header__feedback .form__input--name::-ms-input-placeholder {
-    background-position: 12vw;
+    background-position: 10vw;
   }
   .header__feedback .form__input--name::placeholder {
-    background-position: 12vw;
+    background-position: 10vw;
   }
   .header__feedback .form__input--phone::-webkit-input-placeholder {
-    background-position: 10vw;
+    background-position: 8vw;
   }
   .header__feedback .form__input--phone::-moz-placeholder {
-    background-position: 10vw;
+    background-position: 8vw;
   }
   .header__feedback .form__input--phone:-ms-input-placeholder {
-    background-position: 10vw;
+    background-position: 8vw;
   }
   .header__feedback .form__input--phone::-ms-input-placeholder {
-    background-position: 10vw;
+    background-position: 8vw;
   }
   .header__feedback .form__input--phone::placeholder {
-    background-position: 10vw;
+    background-position: 8vw;
   }
   .header__feedback .form__input::-webkit-input-placeholder {
     background-size: 3vw;
@@ -3384,36 +3431,37 @@ h6 {
     height: 7.813vw;
     font-size: 2.604vw;
     line-height: 2.995vw;
+    padding: 1vw 3vw;
   }
   .feedback .form__input--name::-webkit-input-placeholder {
-    background-position: 18vw;
+    background-position: 16vw;
   }
   .feedback .form__input--name::-moz-placeholder {
-    background-position: 18vw;
+    background-position: 16vw;
   }
   .feedback .form__input--name:-ms-input-placeholder {
-    background-position: 18vw;
+    background-position: 16vw;
   }
   .feedback .form__input--name::-ms-input-placeholder {
-    background-position: 18vw;
+    background-position: 16vw;
   }
   .feedback .form__input--name::placeholder {
-    background-position: 18vw;
+    background-position: 16vw;
   }
   .feedback .form__input--phone::-webkit-input-placeholder {
-    background-position: 16vw;
+    background-position: 14vw;
   }
   .feedback .form__input--phone::-moz-placeholder {
-    background-position: 16vw;
+    background-position: 14vw;
   }
   .feedback .form__input--phone:-ms-input-placeholder {
-    background-position: 16vw;
+    background-position: 14vw;
   }
   .feedback .form__input--phone::-ms-input-placeholder {
-    background-position: 16vw;
+    background-position: 14vw;
   }
   .feedback .form__input--phone::placeholder {
-    background-position: 16vw;
+    background-position: 14vw;
   }
   .feedback .form__input::-webkit-input-placeholder {
     background-size: 3vw;
@@ -3878,14 +3926,12 @@ h6 {
     grid-row-gap: 6.51vw;
   }
   .product__item:not(:last-child) {
-    margin-bottom: 19.999px;
-  }
-  .product__item-kind {
-    margin-bottom: 5.998px;
+    margin-bottom: 1.042vw;
   }
   .product__item-title {
     font-size: 4.948vw;
     line-height: 5.729vw;
+    margin-bottom: 0.312vw;
   }
   .product__item-title span {
     margin: 0 auto 0 2vw;
@@ -3895,6 +3941,14 @@ h6 {
   .product__item-title svg {
     width: 3vw;
     height: 3vw;
+  }
+  .product__item--subtitle {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  .product__item--subtitle svg {
+    width: 2vw;
+    height: 2vw;
   }
   .product__item-link:not(:last-child) {
     margin-bottom: 1.953vw;
@@ -4229,6 +4283,7 @@ h6 {
     height: 13.333vw;
     font-size: 4.8vw;
     line-height: 5.733vw;
+    padding: 1vw 5vw;
   }
   .header__feedback .form__input--name::-webkit-input-placeholder {
     background-position: 22vw;
@@ -4659,36 +4714,37 @@ h6 {
     height: 13.333vw;
     font-size: 4.8vw;
     line-height: 5.733vw;
+    padding: 1vw 5vw;
   }
   .feedback .form__input--name::-webkit-input-placeholder {
-    background-position: 22vw;
+    background-position: 20vw;
   }
   .feedback .form__input--name::-moz-placeholder {
-    background-position: 22vw;
+    background-position: 20vw;
   }
   .feedback .form__input--name:-ms-input-placeholder {
-    background-position: 22vw;
+    background-position: 20vw;
   }
   .feedback .form__input--name::-ms-input-placeholder {
-    background-position: 22vw;
+    background-position: 20vw;
   }
   .feedback .form__input--name::placeholder {
-    background-position: 22vw;
+    background-position: 20vw;
   }
   .feedback .form__input--phone::-webkit-input-placeholder {
-    background-position: 17vw;
+    background-position: 15vw;
   }
   .feedback .form__input--phone::-moz-placeholder {
-    background-position: 17vw;
+    background-position: 15vw;
   }
   .feedback .form__input--phone:-ms-input-placeholder {
-    background-position: 17vw;
+    background-position: 15vw;
   }
   .feedback .form__input--phone::-ms-input-placeholder {
-    background-position: 17vw;
+    background-position: 15vw;
   }
   .feedback .form__input--phone::placeholder {
-    background-position: 17vw;
+    background-position: 15vw;
   }
   .feedback .form__input::-webkit-input-placeholder {
     background-size: 5vw;
@@ -5084,12 +5140,10 @@ h6 {
   .product__item:not(:last-child) {
     margin-bottom: 5.333vw;
   }
-  .product__item-kind {
-    margin-bottom: 1.599vw;
-  }
   .product__item-title {
     font-size: 10.133vw;
     line-height: 11.733vw;
+    margin-bottom: 1.599vw;
   }
   .product__item-title span {
     margin: 0 auto 0 3vw;
@@ -5102,6 +5156,14 @@ h6 {
   .product__item-title svg {
     width: 5vw;
     height: 5vw;
+  }
+  .product__item--subtitle {
+    font-size: 8vw;
+    line-height: 9vw;
+  }
+  .product__item--subtitle svg {
+    width: 4vw;
+    height: 4vw;
   }
   .product__item-link:not(:last-child) {
     margin-bottom: 4vw;
