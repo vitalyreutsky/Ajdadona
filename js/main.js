@@ -1462,7 +1462,7 @@ const certificatesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".
   },
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.7,
       slidesPerGroup: 1
     },
     375: {
@@ -1495,7 +1495,7 @@ const offersSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".offers
   },
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1.3,
       slidesPerGroup: 1,
       loop: true,
       centeredSlides: true
