@@ -37,15 +37,10 @@
   transform: rotate(180deg);
 }
 
-.product__item--subtitle.tab-header__item--active {
-  color: inherit !important;
-}
-
 .dropdown--active {
   display: block !important;
 }
 
-.product__item-menu,
-.product__item--submenu {
+.product__item-menu {
   display: none;
 }
