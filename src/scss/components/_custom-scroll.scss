@@ -10,6 +10,10 @@
   width: 0.781vw;
 }
 
+.simplebar-track.simplebar-horizontal {
+  display: none;
+}
+
 .simplebar-scrollbar::before {
   left: 0;
   top: 0;

@@ -2404,6 +2404,7 @@
       border-radius: 2.667vw;
       width: 100%;
       height: 13.333vw;
+
       svg {
         width: 7vw;
         height: 7vw;
@@ -2411,6 +2412,7 @@
       }
 
       &:not(:last-child) {
+        margin-right: 0;
         margin-bottom: 4vw;
       }
     }
@@ -2538,7 +2540,7 @@
       position: relative;
       z-index: 1;
       img {
-        border-radius: 2.667vw;
+        border-radius: 3.5vw;
       }
     }
 

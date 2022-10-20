@@ -31,16 +31,9 @@
   }
 }
 
-.accordion__header.active .accordion__header-icon {
+.accordion__header-icon--active {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.product__item-title.tab-header__item--active svg {
-  transform: rotate(180deg);
-}
-.product__item--subtitle.tab-header__item--active svg {
   transform: rotate(180deg);
 }
 
