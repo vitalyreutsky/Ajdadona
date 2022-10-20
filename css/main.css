@@ -530,19 +530,7 @@ h6 {
   color: rgba(0, 0, 0, 0.47);
 }
 
-.accordion__header.active .accordion__header-icon {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.product__item-title.tab-header__item--active svg {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.product__item--subtitle.tab-header__item--active svg {
+.accordion__header-icon--active {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -697,6 +685,10 @@ h6 {
 .simplebar-track.simplebar-vertical {
   background-color: #e0e0e0;
   width: 0.781vw;
+}
+
+.simplebar-track.simplebar-horizontal {
+  display: none;
 }
 
 .simplebar-scrollbar::before {
@@ -1209,8 +1201,8 @@ h6 {
 .our-offices__sea img {
   width: 100%;
   height: 100%;
-  -webkit-animation: sea 10s ease-in-out infinite;
-  animation: sea 10s ease-in-out infinite;
+  -webkit-animation: sea 15s ease-in-out infinite;
+  animation: sea 15s ease-in-out infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
@@ -1313,8 +1305,8 @@ h6 {
     transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 }
 
@@ -1324,8 +1316,8 @@ h6 {
     transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 }
 .feedback {
@@ -5095,6 +5087,7 @@ h6 {
     margin-left: 3vw;
   }
   .products__btn:not(:last-child) {
+    margin-right: 0;
     margin-bottom: 4vw;
   }
   .products__show-btn--close {
@@ -5203,7 +5196,7 @@ h6 {
     z-index: 1;
   }
   .single-product__card-image img {
-    border-radius: 2.667vw;
+    border-radius: 3.5vw;
   }
   .single-product__card-descr {
     margin-top: -4vw;

@@ -1525,7 +1525,6 @@ const offersSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".offers
 
 // Реализация табов
 const sectionProducts = document.querySelector(".products");
-const sectionProduct = document.querySelector(".single-product");
 let tabs = document.querySelectorAll(".product__item-title"),
     tabsContent = document.querySelectorAll(".tab-content"),
     tabsParent = document.querySelector(".tab-header__items"),
@@ -1571,10 +1570,12 @@ let itemMenuOpen = document.querySelectorAll(".product__item-title");
 for (i = 0; i < itemMenuOpen.length; i++) {
   let subMenu = itemMenuOpen[i].nextElementSibling;
   let thisitemMenuOpen = itemMenuOpen[i];
+  let thisItemSvg = itemMenuOpen[i].querySelector("svg");
   itemMenuOpen[i].addEventListener("click", function () {
     subMenu.classList.toggle("show-tabs-menu");
     thisitemMenuOpen.classList.toggle("tab-header__item--active");
     subMenu.classList.toggle("fade");
+    thisItemSvg.classList.toggle("accordion__header-icon--active");
   });
 }
 
@@ -1586,6 +1587,7 @@ for (i = 0; i < itemSubMenuOpen.length; i++) {
       e.target.classList.toggle("tab-header__item--active");
       e.target.nextElementSibling.classList.toggle("show-tabs-menu");
       e.target.nextElementSibling.classList.toggle("fade");
+      e.target.querySelector("svg").classList.toggle("accordion__header-icon--active");
     }
   });
 }
