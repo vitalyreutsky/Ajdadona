@@ -6,6 +6,9 @@ let tabs = document.querySelectorAll(".product__item-title"),
   tabsParent = document.querySelector(".tab-header__items"),
   tabsMenu = document.querySelectorAll(".product__item-menu");
 
+let hash = window.location.hash.replace("#", "");
+console.log(hash);
+
 if (sectionProducts) {
   function hideTabContent() {
     tabsContent.forEach((item) => {
@@ -26,7 +29,12 @@ if (sectionProducts) {
   }
 
   hideTabContent();
-  showTabContent();
+
+  if (tabs[hash].length > 0) {
+    showTabContent(hash);
+  } else {
+    showTabContent();
+  }
 
   tabsParent.addEventListener("click", function (event) {
     const target = event.target;
@@ -48,12 +56,19 @@ for (i = 0; i < itemMenuOpen.length; i++) {
   let thisitemMenuOpen = itemMenuOpen[i];
   let thisItemSvg = itemMenuOpen[i].querySelector("svg");
 
-  itemMenuOpen[i].addEventListener("click", function () {
+  itemMenuOpen[i].addEventListener("click", function (e) {
     subMenu.classList.toggle("show-tabs-menu");
     thisitemMenuOpen.classList.toggle("tab-header__item--active");
 
     subMenu.classList.toggle("fade");
 
     thisItemSvg.classList.toggle("accordion__header-icon--active");
+
+    let categoryTitle = document.querySelector(".products__category-title");
+    categoryTitle.firstChild.textContent = e.target.firstChild.textContent;
+    categoryTitle.lastElementChild.textContent =
+      e.target.querySelector("span").textContent;
   });
 }
+
+////////////
