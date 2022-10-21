@@ -30,7 +30,7 @@ if (sectionProducts) {
 
   hideTabContent();
 
-  if (tabs[hash].length > 0) {
+  if (tabs[hash]) {
     showTabContent(hash);
   } else {
     showTabContent();
