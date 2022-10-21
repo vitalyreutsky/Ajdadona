@@ -7,7 +7,7 @@ let tabs = document.querySelectorAll(".product__item-title"),
   tabsMenu = document.querySelectorAll(".product__item-menu");
 
 let hash = window.location.hash.replace("#", "");
-console.log(hash);
+console.log("qqq");
 
 if (sectionProducts) {
   function hideTabContent() {
