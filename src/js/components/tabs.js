@@ -1,13 +1,13 @@
 // Реализация табов
 const sectionProducts = document.querySelector(".products");
+const sectionProduct = document.querySelector(".single-product");
 
 let tabs = document.querySelectorAll(".product__item-title"),
   tabsContent = document.querySelectorAll(".tab-content"),
   tabsParent = document.querySelector(".tab-header__items"),
-  tabsMenu = document.querySelectorAll(".product__item-menu");
-
-let hash = window.location.hash.replace("#", "");
-console.log("qqq");
+  tabsMenu = document.querySelectorAll(".product__item-menu"),
+  categoryTitle = document.querySelector(".products__category-title"),
+  hash = window.location.hash.replace("#", "");
 
 if (sectionProducts) {
   function hideTabContent() {
@@ -26,15 +26,72 @@ if (sectionProducts) {
     tabsContent[i].classList.remove("hide");
 
     tabs[i].classList.add("tab-header__item--active");
+
+    let btnClear = document.querySelector(".products__btn-clear");
+
+    btnClear.addEventListener("click", () => {
+      history.go(0);
+    });
+
+    categoryTitle.firstChild.textContent = tabs[i].firstChild.textContent;
+    categoryTitle.lastElementChild.textContent =
+      tabs[i].querySelector("span").textContent;
   }
 
   hideTabContent();
-
   if (tabs[hash]) {
     showTabContent(hash);
   } else {
     showTabContent();
   }
+
+  tabsParent.addEventListener("click", function (event) {
+    const target = event.target;
+    if (target.classList.contains("product__item-title")) {
+      tabs.forEach((item, i) => {
+        if (target == item) {
+          hideTabContent();
+          showTabContent(i);
+
+          categoryTitle.firstChild.textContent = target.firstChild.textContent;
+          categoryTitle.lastElementChild.textContent =
+            target.querySelector("span").textContent;
+        }
+      });
+    }
+  });
+}
+
+if (sectionProduct) {
+  function hideTabContent() {
+    tabs.forEach((item) => {
+      item.classList.remove("tab-header__item--active");
+    });
+  }
+
+  function showTabContent(i = 0) {
+    tabs[i].classList.add("tab-header__item--active");
+  }
+
+  function showTitleContent(i = 0) {
+    categoryTitle.firstChild.textContent = tabs[i].firstChild.textContent;
+    categoryTitle.lastElementChild.textContent =
+      tabs[i].querySelector("span").textContent;
+  }
+
+  hideTabContent();
+  if (tabs[hash]) {
+    showTabContent(hash);
+    showTitleContent(hash);
+  } else {
+    showTabContent();
+    showTitleContent();
+  }
+
+  let btnClear = document.querySelector(".products__btn-clear");
+  btnClear.addEventListener("click", () => {
+    history.go(0);
+  });
 
   tabsParent.addEventListener("click", function (event) {
     const target = event.target;
@@ -63,12 +120,5 @@ for (i = 0; i < itemMenuOpen.length; i++) {
     subMenu.classList.toggle("fade");
 
     thisItemSvg.classList.toggle("accordion__header-icon--active");
-
-    let categoryTitle = document.querySelector(".products__category-title");
-    categoryTitle.firstChild.textContent = e.target.firstChild.textContent;
-    categoryTitle.lastElementChild.textContent =
-      e.target.querySelector("span").textContent;
   });
 }
-
-////////////

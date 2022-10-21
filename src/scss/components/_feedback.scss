@@ -95,6 +95,10 @@
       background-size: 1vw;
       background-repeat: no-repeat;
     }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
   }
 
   &__input--name::placeholder {
@@ -113,6 +117,7 @@
     color: var(--light-color);
     padding: 0.729vw 3.802vw;
     border-radius: 0.521vw;
+    font-weight: 700;
     line-height: 1.771vw;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;

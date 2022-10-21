@@ -19,6 +19,18 @@
       transform: rotate(40.8deg);
       z-index: 3;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8vw;
+      left: 44.5%;
+      width: 4vw;
+      height: 150%;
+      background-color: #d7e8ef;
+      transform: rotate(40.8deg);
+      z-index: 3;
+    }
   }
 
   &__content {

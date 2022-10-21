@@ -178,6 +178,10 @@
       background-color: var(--black-color);
     }
 
+    &::after {
+      transition: all 0.2s ease-in-out;
+    }
+
     &::before {
       width: 100%;
       height: 0.391vw;
@@ -287,6 +291,13 @@
         height: 200%;
         transform: rotate(47.6deg);
       }
+      &::before {
+        top: -29.125vw;
+        left: 33.5%;
+        width: 5.693vw;
+        height: 200%;
+        transform: rotate(47.6deg);
+      }
     }
 
     &__content {
@@ -360,7 +371,7 @@
 
     &__item {
       padding: 3.906vw 2.604vw;
-      width: auto;
+      width: 100%;
       height: 53.688vw;
       border-radius: 1.954vw;
     }
@@ -377,13 +388,16 @@
     }
 
     .products-meat {
-      object-fit: contain;
-      object-position: 13vw 1vw;
+      left: 13vw;
+      img {
+        object-fit: contain;
+        object-position: 13vw 1vw;
+      }
     }
 
     &__link {
       width: 7.162vw;
-      height: 7.162vw;
+      height: 8.162vw;
       border-radius: 1.302vw;
       svg {
         width: 2.693vw;
@@ -1075,18 +1089,16 @@
         transition: all 0.3s ease-in-out;
       }
 
-      &:focus {
-        color: var(--light-color);
-        background-color: var(--red-color);
-        border: 1px solid transparent;
-      }
-
-      &:focus svg {
-        fill: var(--light-color);
-      }
-
       &:not(:last-child) {
         margin-right: 3vw;
+      }
+
+      &-category {
+        background-color: var(--red-color);
+        color: var(--light-color);
+        svg {
+          fill: var(--light-color);
+        }
       }
     }
 
@@ -1686,9 +1698,18 @@
         left: 0%;
         width: 9vw;
         height: 200%;
-        -webkit-transform: rotate(46deg);
-        -ms-transform: rotate(46deg);
-        transform: rotate(46deg);
+        -webkit-transform: rotate(45.5deg);
+        -ms-transform: rotate(45.5deg);
+        transform: rotate(45.5deg);
+      }
+      &::before {
+        top: -37vw;
+        left: -7%;
+        width: 9vw;
+        height: 200%;
+        -webkit-transform: rotate(45.5deg);
+        -ms-transform: rotate(45.5deg);
+        transform: rotate(45.5deg);
       }
     }
 
