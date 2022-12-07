@@ -1,0 +1,21 @@
+/*
+Theme Name: Adjadona
+Theme URI: http://underscores.me/
+Author: Vitaly Reutsky
+Author URI: https://github.com/vitalyreutsky
+Description: Fish&Meat
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: adjadona
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+.navigation .post-navigation,
+.comments-area,
+.entry-header,
+.nav-links {
+  display: none;
+}
